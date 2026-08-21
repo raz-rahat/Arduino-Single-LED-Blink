@@ -1,55 +1,55 @@
-# 🔴 Single LED Blink — Arduino Beginner Project
+# 🔴 সিঙ্গেল LED ব্লিংক — আরডুইনো বিগিনার প্রজেক্ট
 
-A classic **"Hello World" of embedded electronics** — this project blinks a single LED on and off every second using an Arduino (or ESP32). Perfect first step for anyone starting with microcontrollers.
+এম্বেডেড ইলেকট্রনিক্সের একদম প্রথম প্রজেক্ট এটা — একটা LED প্রতি ১ সেকেন্ড পর পর জ্বলবে এবং নিভবে। যারা মাইক্রোকন্ট্রোলার শেখা শুরু করছেন, তাদের জন্য এটাই সবচেয়ে ভালো প্রথম ধাপ।
 
-## ✨ What It Does
-- Turns an LED **ON** for 1 second
-- Turns the LED **OFF** for 1 second
-- Repeats forever in a simple loop
+## ✨ এই প্রজেক্টে কী হবে
+- LED **১ সেকেন্ডের জন্য জ্বলবে (ON)**
+- LED **১ সেকেন্ডের জন্য নিভবে (OFF)**
+- এভাবে বারবার লুপে চলতে থাকবে
 
-## 🧰 Components Required
-| Component | Quantity | Notes |
+## 🧰 প্রয়োজনীয় উপকরণ
+| উপকরণ | পরিমাণ | নোট |
 |---|---|---|
-| Arduino Uno / ESP32 Board | 1 | Either works |
-| LED (any color) | 1 | |
-| 220Ω Resistor | 1 | Recommended, protects the LED |
-| Breadboard | 1 | |
-| Jumper Wires (M-M) | 2 | |
-| USB Cable | 1 | For power & programming |
+| Arduino Uno / ESP32 বোর্ড | ১টি | যেকোনো একটা হলেই চলবে |
+| LED (যেকোনো রঙের) | ১টি | |
+| ২২০ ওহম রেজিস্টর | ১টি | LED সুরক্ষার জন্য দেওয়া ভালো |
+| ব্রেডবোর্ড | ১টি | |
+| জাম্পার ওয়্যার (Male-to-Male) | ২টি | |
+| USB কেবল | ১টি | পাওয়ার ও প্রোগ্রামিং এর জন্য |
 
-## 🔌 Connection / Pinout
+## 🔌 সার্কিট কানেকশন
 
-| LED Pin | Connects To |
+| LED এর পা | কোথায় যুক্ত হবে |
 |---|---|
-| Anode (long leg, +) | Pin 13 (Arduino) / Pin 2 (ESP32) — through a 220Ω resistor |
-| Cathode (short leg, −) | GND |
+| Anode (লম্বা পা, +) | Pin 13 (Arduino) / Pin 2 (ESP32) — একটা ২২০ ওহম রেজিস্টরের মাধ্যমে |
+| Cathode (খাটো পা, −) | GND |
 
-> 💡 **Tip:** Always connect the resistor in series with the LED to limit current and prevent burnout.
+> 💡 **টিপস:** LED এর সাথে সবসময় সিরিজে একটা রেজিস্টর ব্যবহার করবে, এতে কারেন্ট নিয়ন্ত্রিত থাকে এবং LED পুড়ে যায় না।
 >
-> ⚠️ **ESP32 Note:** Be careful with voltage on signal pins when using sensors/motors elsewhere in bigger builds — this simple LED circuit is safe on both boards.
+> ⚠️ **ESP32 নোট:** বড় প্রজেক্টে যেখানে সেন্সর বা মোটর ব্যবহার হয়, সেখানে সিগন্যাল পিনে বেশি ভোল্টেজ যাতে না যায় সেদিকে খেয়াল রাখবে। তবে এই সাধারণ LED সার্কিট Arduino ও ESP32 — দুটোতেই নিরাপদ।
 
-## 📚 Required Libraries
-None — this project uses only built-in Arduino functions (`pinMode`, `digitalWrite`, `delay`).
+## 📚 প্রয়োজনীয় লাইব্রেরি
+কোনো আলাদা লাইব্রেরি লাগবে না — এই প্রজেক্টে শুধু আরডুইনোর বিল্ট-ইন ফাংশন (`pinMode`, `digitalWrite`, `delay`) ব্যবহার করা হয়েছে।
 
-## ⚙️ Setup Instructions
-1. Open `Day_1_LED_Code.ino` in Arduino IDE.
-2. Wire the LED as shown in the pinout table above.
-3. Select your board (**Arduino Uno** or **ESP32 Dev Module**) and the correct COM port.
-4. Click **Upload**.
-5. Watch the LED blink every 1 second!
+## ⚙️ সেটআপ করার নিয়ম
+1. Arduino IDE-তে `Day_1_LED_Code.ino` ফাইলটা খুলো।
+2. উপরের টেবিল অনুযায়ী LED কানেক্ট করো।
+3. তোমার বোর্ড সিলেক্ট করো (**Arduino Uno** অথবা **ESP32 Dev Module**) এবং সঠিক COM পোর্ট বেছে নাও।
+4. **Upload** বাটনে ক্লিক করো।
+5. এখন দেখবে LED প্রতি ১ সেকেন্ড পর পর জ্বলছে আর নিভছে!
 
-## 🧠 What You'll Learn
-- Digital output control with `digitalWrite()`
-- Using `delay()` for timing
-- Basic breadboard wiring & circuit safety (resistors, common ground)
+## 🧠 এখান থেকে যা শিখবে
+- `digitalWrite()` দিয়ে ডিজিটাল আউটপুট নিয়ন্ত্রণ করা
+- সময় নিয়ন্ত্রণের জন্য `delay()` ব্যবহার করা
+- ব্রেডবোর্ডে বেসিক ওয়্যারিং এবং সার্কিট সুরক্ষা (রেজিস্টর, কমন গ্রাউন্ড)
 
-## 📺 Credit & Links
-Project by **RAZ**
+## 📺 ক্রেডিট ও লিংক
+প্রজেক্ট বানিয়েছেন **RAZ**
 
-- 🎥 YouTube: [Tech Raz Friday](https://www.youtube.com/@razfriday)
-- 📘 Facebook: [facebook.com/mdraz1995](https://www.facebook.com/mdraz1995)
+- 🎥 ইউটিউব: [Tech Raz Friday](https://www.youtube.com/@razfriday)
+- 📘 ফেসবুক: [facebook.com/mdraz1995](https://www.facebook.com/mdraz1995)
 
-If this helped you get started with Arduino, consider subscribing for more beginner-friendly embedded projects!
+এই প্রজেক্ট যদি তোমার আরডুইনো শেখা শুরু করতে সাহায্য করে থাকে, তাহলে আরো বিগিনার-ফ্রেন্ডলি এম্বেডেড প্রজেক্টের জন্য চ্যানেলটা সাবস্ক্রাইব করতে পারো!
 
-## 📄 License
-Free to use and modify for personal and educational projects. Credit to **Tech Raz Friday** is appreciated when sharing or republishing.
+## 📄 লাইসেন্স
+ব্যক্তিগত ও শিক্ষামূলক কাজে বিনামূল্যে ব্যবহার ও পরিবর্তন করা যাবে। শেয়ার বা রিপাবলিশ করার সময় **Tech Raz Friday** কে ক্রেডিট দিলে ভালো হয়।
